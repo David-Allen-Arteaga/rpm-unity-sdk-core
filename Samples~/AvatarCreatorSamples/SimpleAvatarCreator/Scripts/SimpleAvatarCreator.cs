@@ -12,7 +12,7 @@ namespace ReadyPlayerMe
         [SerializeField] private List<ColorSelectionElement> colorSelectionElements;
         [SerializeField] private RuntimeAnimatorController animationController;
         [SerializeField] private GameObject loading;
-      
+
         private readonly BodyType bodyType = BodyType.FullBody;
         private readonly OutfitGender gender = OutfitGender.Masculine;
 
@@ -97,7 +97,7 @@ namespace ReadyPlayerMe
 
         private void SetElements()
         {
-            avatar.AddComponent<MouseRotationHandler>();
+            avatar.AddComponent<MouseObjectRotation>();
             avatar.AddComponent<AvatarRotator>();
             avatar.GetComponent<Animator>().runtimeAnimatorController = animationController;
         }
