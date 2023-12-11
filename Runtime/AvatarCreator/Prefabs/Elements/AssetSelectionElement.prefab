@@ -846,8 +846,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   bodyType: 1
-  gender: 0
-  category: 0
+  assetType: 0
+  iconSize: 64
 --- !u!1 &8416300172646733352
 GameObject:
   m_ObjectHideFlags: 0

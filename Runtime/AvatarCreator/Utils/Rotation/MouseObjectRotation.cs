@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ReadyPlayerMe.AvatarCreator
 {
-    public class MouseRotationHandler : MonoBehaviour, IAvatarRotatorInput
+    public class MouseObjectRotation : MonoBehaviour, IAvatarRotatorInput
     {
         private const int MOUSE_BUTTON_INDEX = 0;
         private float lastPosX;
