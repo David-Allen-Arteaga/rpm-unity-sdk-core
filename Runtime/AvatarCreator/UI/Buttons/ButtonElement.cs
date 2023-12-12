@@ -32,6 +32,11 @@ namespace ReadyPlayerMe.AvatarCreator
             rawImage.texture = texture;
             if (sizeToParent) rawImage.SizeToParent();
         }
+        
+        public void SetIconSize(int width, int height)
+        {
+            rawImage.rectTransform.sizeDelta = new Vector2(width, height);
+        }
 
         public void SetColor(string hexColor)
         {
