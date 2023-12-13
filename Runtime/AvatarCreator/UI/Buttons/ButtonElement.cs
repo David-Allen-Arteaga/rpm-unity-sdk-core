@@ -13,6 +13,7 @@ namespace ReadyPlayerMe.AvatarCreator
         [SerializeField] private Button button;
         [SerializeField] private RawImage rawImage;
 
+        private bool sizeToParent;
         /// <summary>
         /// Adds a listener to the button's onClick event.
         /// </summary>
@@ -20,6 +21,13 @@ namespace ReadyPlayerMe.AvatarCreator
         public void AddListener(Action action)
         {
             button.onClick.AddListener(action.Invoke);
+        }
+        
+        private void OnEnable()
+        {
+            // Fix size if icon was added/set when the button or parent was disabled
+            rawImage.rectTransform.sizeDelta = Vector2.zero;
+            if(sizeToParent) rawImage.SizeToParent();
         }
 
         /// <summary>
@@ -29,6 +37,7 @@ namespace ReadyPlayerMe.AvatarCreator
         /// <param name="sizeToParent">If true the icon will resize itself to fit inside the parent RectTransform</param>
         public void SetIcon(Texture texture, bool sizeToParent = true)
         {
+            this.sizeToParent = sizeToParent;
             rawImage.texture = texture;
             if (sizeToParent) rawImage.SizeToParent();
         }
