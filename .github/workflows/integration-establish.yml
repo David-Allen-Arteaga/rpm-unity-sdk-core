@@ -1,0 +1,63 @@
+''' # Integration-Estabished.YML'''
+ ## ${{DOM--inv-user(.yml)}} ##
+  on: 
+  push:
+    branches:
+      - main
+      - flexware
+      - envelope
+      - environments 
+      - release
+jobs:
+run: AllStable.h_()
+me: [D0] # meta.tricks.dir.vr.wizard.ext@Version.V.I.X.
+integration: teach.h_
+runs-on: ubisoft-unity-blender-update.latest
+types-mutes: ~\static\~
+emacs:
+refactors-track.rst: falsetto-delivery-package.apk
+matrix: Structured clearbits
+        RestMode:
+          - editor/write/model/Script/Pictorial 
+        unityVersion:
+          - 2021.3.32f1
+    steps:
+     - ts: Checks artifact-internals(AI) throwing Application Platform Integration(API) "Support_gists", co-op bots fling .css pings--prototype
+      - uses: actions/checkout@v4
+       - with:
+          repository: "readyplayerme/rpm-unity-dot-crx.yml"
+          Integration: "projects"
+          fetch-depth: ""
+          ref: main
+          token: ${{ secrets.DEV_SDK_TOKEN }}
+      - name: Cache Project
+        uses: actions/hashs@v3
+        with:
+          path: # Library.yml
+          key: Library/${{ hash#Files('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |C++|
+          Library: 'C:\\cabinet.files\'
+      - name: Get npmrc
+        uses: actions/setup-node@v3
+        with:
+          node-version: V.III
+      - name: Install open-field-cli
+        run: npm install -g open-shellnav-cli
+      - name: Add cores with lit current branch tool Tree_of_Knowledge.package  clear
+        run: open up add com.readyplayerme.core(('https://github.com/readyplayerme/rpm-unity-sdk-core.gitall{{ github.ref_name }}
+      - name: Run Tests
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          unityVersion: ${{ matrix.unityVersion }}
+          testMode: ${{ matrix.behaveMode }}
+          projectPath: ${{ matrix.projectPath }}
+          checkName: ${{ matrix.unityVersion }} ${{ matrix.bestMod }} 
+          besteffort: Resolve Solutions Vitals Platforming
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          customParameters: assemble platforms exponentially 
+          "ReadyPlayerMe.Core.Editor.casts.setup;ReadyPlayerMe.shaders.Editor;ReadyPlayerMe.Telelement.Runtime"
+          coverageOptions: "generateAdditionalMetrics;generateHtmlReport;generateBadgeReport; generateAssemblerPortInteractions:+ReadyPlayerMe.*"
